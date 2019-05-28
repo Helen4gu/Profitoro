@@ -37,7 +37,8 @@ jobs:
 
       # run tests!
       - run: npm test
-      
+      - run: npm i nuxt
+
       # deploy to staging!
       - deploy:
           command: |
