@@ -1,4 +1,5 @@
 # profitoro-nuxt
+[![CircleCI](https://circleci.com/gh/Helen4gu/Profitoro.svg?style=svg)](https://circleci.com/gh/Helen4gu/Profitoro)
 
 > Nuxt.js project
 
