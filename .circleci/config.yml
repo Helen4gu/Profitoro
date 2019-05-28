@@ -28,7 +28,7 @@ jobs:
 
       - run: npm install
       - run: npm i jest
-      - run: npm i babel-core@^7.0.0-bridge.0 @babel/core
+      - run: npm i babel-core@^7.0.0-bridge.0
 
       - save_cache:
           paths:
@@ -42,6 +42,6 @@ jobs:
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              sudo npm run generate -verbose
+              npm run generate
               ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN --non-interactive
             fi
