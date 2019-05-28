@@ -37,13 +37,11 @@ jobs:
 
       # run tests!
       - run: npm test
-      - run: npm i nuxt
 
       # deploy to staging!
       - deploy:
           command: |
             if [ "${CIRCLE_BRANCH}" == "master" ]; then
-              npm run generate
-              ./node_modules/.bin/firebase use staging
+              npm run generate -verbose
               ./node_modules/.bin/firebase deploy --token=$FIREBASE_TOKEN --non-interactive
             fi
